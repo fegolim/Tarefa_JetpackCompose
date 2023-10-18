@@ -1,5 +1,4 @@
 package com.example.JetpackCompose
-
 import android.content.res.Configuration
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -21,7 +20,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -32,8 +30,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.JetpackCompose.ui.theme.ComposeTutorialTheme
-import com.example.`jetpack-compose`.SampleData
+import com.example.`jetpack-compose`.R
+import androidx.compose.material3.Surface as Surface1
 import androidx.compose.ui.Modifier as Modifier1
 
 // ...
@@ -43,7 +41,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ComposeTutorialTheme {
-                Surface(modifier = Modifier1.fillMaxSize()) {
+                Surface1(modifier = Modifier1.fillMaxSize()) {
                     Conversation(SampleData.conversationSample)
                 }
             }
@@ -84,7 +82,7 @@ fun MessageCard(msg: Message) {
 
             Spacer(modifier = Modifier1.height(4.dp))
 
-            Surface(
+            Surface1(
                 shape = MaterialTheme.shapes.medium,
                 tonalElevation = 1.dp,
                 color = surfaceColor,
@@ -112,7 +110,7 @@ fun MessageCard(msg: Message) {
 @Composable
 fun PreviewMessageCard() {
     ComposeTutorialTheme {
-        Surface {
+        Surface1 {
             MessageCard(
                 msg = Message("Colleague", "Hey, take a look at Jetpack Compose, it's great!")
             )
@@ -138,8 +136,8 @@ fun PreviewConversation(){
 }
 
 @Composable
-fun ComposeTutorialTheme(.: () -> Unit) {
-
+fun ComposeTutorialTheme(content: @Composable () -> Unit) {
+    TODO("Not yet implemented")
 }
 
 

@@ -1,6 +1,4 @@
-package com.example.`jetpack-compose`
-
-import android.os.Message
+package com.example.JetpackCompose
 
 object SampleData {
     // Sample conversation data
